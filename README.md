@@ -24,3 +24,12 @@
 - Sometimes users can't access the DB server
 - Go to Firewalls and virtual networks on the SQL server created when the SQL database is created.
 - Add client IP address with the start IP and end IP
+
+
+
+
+
+
+
+
+# Azure AD Authentication - Azure SQL Databases

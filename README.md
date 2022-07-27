@@ -33,3 +33,20 @@
 
 
 # Azure AD Authentication - Azure SQL Databases
+- SQL authentication is via user id and password when we created it during the SQL database creation.
+- What if instead of creating an user ID one by one, we can use Azure AD identities.
+
+
+
+#  Allocating access to Azure AD users to access Azure SQL Database #247
+- First step is to enable Azure AD authentication
+- Go to Azure AD and create a new user that will act as the db admin
+- Go to SQL server > Azure AD > Set admin 
+- Now log in to SQL management studio using the admin's email
+- As an admin, the SQL db admin can now assign access to the Azure SQL database by running a query to create and assign permissions.
+
+
+
+# Azure SQL Database - Transparent Data Encryption
+- 
+

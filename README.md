@@ -48,5 +48,32 @@
 
 
 # Azure SQL Database - Transparent Data Encryption
-- 
+- All of the data in a Azure SQL database is stored in an Azure data center
+- Azure SQL provides Transparent Data Encryption - meaning that the data is ENCRYPTED first and then stored in a storage device in a Azure Data Center
+- By default, Transparent Data Encryption is enabled for Azure SQL Databases
 
+
+
+# Azure SQL Databases - Always Encrypted Feature
+- Always Encrypted can be used to encrypt data at rest and in motion
+- Can encrypt multiple columns in different tables
+- Can encrypt multiple columns located in the same table
+
+# Two types of encryption - Deterministc Encryption(Less secure)
+- Here the same encrypted value is generated for any given plain text value. 
+- BUT it allows for point lookups, equality joins, grouping and indexing on encrypted columns
+
+# Two types of encryption - Randomized Encryption(Most secure encryption method)
+- This prevents the searching, grouping, indexing and joining on encryped columns
+
+# How to enable the Always Encrypted Feature?
+- Use SQL Server Management Studio
+- 2 keys ALWAYS gets created when the Always Encrypted feature is enabled for a database.
+- The Column master key and the column encryption key
+
+# Always Encrypted Lab #248
+- We need an Azure Key Vault in order to encrypt
+- Go to key vault and ensure that the user has crytographic permissions in Access policies
+- Object Explorer > Select table > right click and select encrypt columns 
+- Select a column you want to encrypt
+- Check in the key vault to see that the master key was encrypted AND if they column select is encrypted
